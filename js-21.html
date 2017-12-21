@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-21</title>
+</head>
+<body>
+    <p>函数存储在变量后,变量可作为函数使用:</p>
+    <p id="demo"></p>
+
+    <p>内置构造函数.</p>
+    <p id="demo2"></p>
+
+    <p>函数可以自调用:</p>
+    <p id="demo3"></p>
+
+    <p> arguments.length 属性返回函数接收到参数的个数：</p>
+    <p id="demo4"></p>
+    <script>
+        var x = function (a,b) {
+            return a * b;
+        };
+        document.getElementById("demo").innerHTML = x(3,4);
+
+        var myFunction = new Function("a","b","return a + b");
+        document.getElementById("demo2").innerHTML = myFunction(4,3);
+
+        (function () {
+            document.getElementById("demo3").innerHTML = "Hello! 我是自己调用的";
+        })();
+
+        function myFunction4(a,b) {
+            return arguments.length;
+        }
+        document.getElementById("demo4").innerHTML = myFunction4(6,5);
+    </script>
+</body>
+</html>

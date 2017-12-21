@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-14</title>
+</head>
+<body>
+    <button type="button" onclick="myFunction('涂斌','顶级全栈程序员')">点击这里</button>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML = myFunction("涂斌","学霸");
+        function myFunction(x,y) {
+            alert(x+"是"+y);
+            return x+"是"+y;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-22</title>
+</head>
+<body>
+    <p>局部变量计数.</p>
+    <button type="button" onclick="myFunction()">计数</button>
+    <p id="demo"></p>
+    <script>
+        var add = (function () {
+            var counter = 0;
+            return function () {
+                return counter += 1;
+            }
+        })();
+        function myFunction() {
+            document.getElementById("demo").innerHTML = add();
+        }
+    </script>
+</body>
+</html>

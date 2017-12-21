@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-16</title>
+</head>
+<body>
+    <p>搜索字符串"TuBin",并显示匹配的起始位置:</p>
+    <button type="button" onclick="myFunction()">点我</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            var str = "xueba is tubin!";
+            var n = str.search(/TuBin/i);//TuBin:是一个模式 (用于检索)。i:是一个修饰符 (搜索不区分大小写).
+            document.getElementById("demo").innerHTML = n;
+        }
+    </script>
+</body>
+</html>
