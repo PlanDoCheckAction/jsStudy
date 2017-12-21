@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-27</title>
+</head>
+<body>
+    <button id="btn" type="button">点我</button>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("btn").addEventListener("click",displayDate);
+        function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+        }
+    </script>
+</body>
+</html>
