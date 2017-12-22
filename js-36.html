@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-36</title>
+</head>
+<body>
+    <p>点击第一个按钮,再等待三秒后弹出"Hello".</p>
+    <p>点击第二个按钮来阻止第一个函数运行.(你必须在三秒之前点击它).</p>
+    <button type="button" onclick="myFunction()">点我</button>
+    <button type="button" onclick="myFunction2()">停止弹框</button>
+    <script>
+        function myFunction() {
+            myVar = setTimeout(function () {
+                alert("Hello");
+            },3000);
+        }
+        function myFunction2() {
+            clearTimeout(myVar);
+        }
+    </script>
+</body>
+</html>

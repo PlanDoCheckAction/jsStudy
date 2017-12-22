@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-33</title>
+</head>
+<body>
+    <input type="button" onclick="myFunction()" value="显示警告框">
+    <input type="button" onclick="myFunction2()" value="显示确认框">
+    <input type="button" onclick="myFunction3()" value="显示警告框">
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            alert("我是警告框!");
+        }
+        function myFunction2() {
+            var x = confirm("我是确认框!")
+            if (x){
+                document.getElementById("demo").innerHTML = "你按下了确认";
+            } else {
+                document.getElementById("demo").innerHTML = "你按下了取消";
+            }
+        }
+        function myFunction3() {
+            var x;
+            var person = prompt("请输入你的名字:");
+            if (person != null && person != ""){
+                x = "你好 " + person + "!";
+            } else {
+                x = "你没有输入你的名字!";
+            }
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script>
+</body>
+</html>

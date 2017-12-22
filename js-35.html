@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-35</title>
+</head>
+<body>
+    <p>在页面显示一个时钟</p>
+    <p id="demo"></p>
+    <button type="button" onclick="myFunction()">停止时钟</button>
+    <script>
+        var myVar = setInterval(function () {
+            var d = new Date();
+            var t = d.toLocaleTimeString();
+            document.getElementById("demo").innerHTML = t;
+        },1000);
+        function myFunction() {
+            clearInterval(myVar);
+        }
+    </script>
+</body>
+</html>
