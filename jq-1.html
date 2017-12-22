@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq-1</title>
+</head>
+<body>
+    <h1 id="h01"></h1>
+    <script src="lib/js/jquery-3.2.1.min.js">
+    </script>
+    <script>
+        function myFunction() {
+            $("#h01").attr("style","color:red").html("Hello jQuery");
+        }
+        $(document).ready(myFunction());
+    </script>
+</body>
+</html>
